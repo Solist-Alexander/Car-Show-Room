@@ -7,7 +7,8 @@ const vehicle = '/vehicle'
 
 const urls = {
     car: {
-        base: `${products}${category}${vehicle}`
+        base: `${products}${category}${vehicle}`,
+        byId: (id: number) => `${products}/${id}`
 
     }
 }

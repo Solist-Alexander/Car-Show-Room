@@ -1,0 +1,13 @@
+.mainCarsList{
+    background: gray;
+
+}
+
+.carsListCardDiv {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+    margin-left: 250px;
+    grid-row-gap: 10px;
+}

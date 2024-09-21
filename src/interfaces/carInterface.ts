@@ -43,7 +43,10 @@ export interface ICar {
     images: string[];
     thumbnail: string;
 }
-
-export interface ICars {
-    cars: ICar[];
+export interface IApiResponse {
+    limit: number;
+    skip: number;
+    total: number;
+    products: ICar[];
 }
+
