@@ -1,0 +1,8 @@
+.mainDiv{
+    border: gold 2px solid;
+    background: #9a9a9a;
+    color: black;
+}
+.mainDiv p{
+    font-size: 20px;
+}

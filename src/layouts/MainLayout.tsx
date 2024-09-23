@@ -4,7 +4,7 @@ import {Outlet} from "react-router-dom";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div style={{background: "gray"}}>
             <Header/>
             <Outlet/>
         </div>

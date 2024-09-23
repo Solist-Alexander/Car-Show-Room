@@ -18,6 +18,13 @@ export interface IMeta {
     barcode: string;
     qrCode: string;
 }
+export interface IReview {
+    rating: number,
+    comment: string,
+    date: string,
+    reviewerName: string,
+    reviewerEmail: string
+}
 
 export interface ICar {
     id: number;

@@ -1,0 +1,11 @@
+.flexDiv{
+    height: 100%;
+    background: gray;
+    display: flex;
+}
+.details{
+    padding: 50px 0 0 30px;
+}
+.details p{
+    font-size: 20px;
+}
