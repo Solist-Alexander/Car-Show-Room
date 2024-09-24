@@ -41,6 +41,7 @@ const CarsDetails: FC<IProps> = ({ carDetails }) => {
             <div className={style.flexDiv}>
                 <div className={style.carousel}>
                     <CarouselForCar images={images} />
+                    {/*<Carousel slides={images}/>*/}
                 </div>
                 <div className={style.details}>
                     <h1>{title}</h1>
