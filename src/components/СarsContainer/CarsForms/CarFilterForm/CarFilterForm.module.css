@@ -1,0 +1,53 @@
+.filterForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Уменьшенное расстояние между элементами */
+    padding: 15px; /* Уменьшенные отступы */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Более мягкие закругленные углы */
+    background-color: #f5f5f5; /* Немного более светлый фон */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Более легкая тень */
+}
+
+.filterForm h2 {
+    margin-bottom: 10px; /* Уменьшенный отступ */
+    font-size: 1.2rem; /* Меньший размер шрифта */
+    color: #333;
+}
+
+.filterForm label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500; /* Сделано немного менее жирным */
+    color: #555;
+    font-size: 0.9rem; /* Уменьшенный размер шрифта */
+}
+
+.filterForm input {
+    padding: 8px; /* Уменьшенные отступы внутри полей */
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Более компактные закругления */
+    font-size: 0.9rem; /* Меньший размер шрифта */
+    transition: border-color 0.2s; /* Более быстрый переход */
+}
+
+.filterForm input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.filterForm button {
+    align-self: flex-start;
+    padding: 8px 12px; /* Более компактные размеры кнопки */
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 0.9rem; /* Меньший размер шрифта */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.filterForm button:hover {
+    background-color: #2980b9;
+}

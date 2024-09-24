@@ -1,26 +1,21 @@
-import React, {useEffect} from 'react';
-import {useAppDispatch, useAppSelector} from "../../../hooks";
-import {carActions} from "../../../store/slices/carSlice";
+import React, { FC } from 'react';
+import { ICar } from "../../../interfaces/carInterface";
 import CarsListCard from "../CarsListCard/CarsListCard";
 import style from "./CarsList.module.css";
 
-const CarsList = () => {
-    const { products } = useAppSelector(state => state.cars);
-    const dispatch = useAppDispatch();
+interface IProps {
+    cars: ICar[];
+}
 
-
-    useEffect(() => {
-        dispatch(carActions.getAll())
-    }, [dispatch])
-
-
+const CarsList: FC<IProps> = ({ cars }) => {
     return (
         <div className={style.mainCarsList}>
-                <div className={style.carsListCardDiv}>
-                    {products && products.map(car => <CarsListCard key={car.id} car={car}/>)}
-                </div>
+            <div className={style.carsListCardDiv}>
+                {cars && cars.map(car => <CarsListCard key={car.id} car={car} />)}
+            </div>
         </div>
     );
 };
 
 export default CarsList;
+
