@@ -1,12 +1,14 @@
+/* Основной стиль для всех экранов */
 .divCarForm {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    max-width: 400px;
+    max-width: 100%; /* Автоматическая адаптация по ширине */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Центрирование формы */
 }
 
 .divCarForm label {
@@ -62,4 +64,41 @@
 .divCarForm textarea {
     resize: vertical;
     min-height: 100px;
+}
+
+/* Адаптивность для экранов 1440px и выше */
+@media (min-width: 1440px) {
+    .divCarForm {
+        max-width: 600px;
+    }
+}
+
+/* Адаптивность для экранов 1920px и выше */
+@media (min-width: 1920px) {
+    .divCarForm {
+        max-width: 800px;
+    }
+}
+
+/* Адаптивность для экранов от 768px до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .divCarForm {
+        max-width: 500px;
+    }
+}
+
+/* Адаптивность для экранов от 480px до 768px (небольшие планшеты и телефоны) */
+@media (max-width: 768px) {
+    .divCarForm {
+        max-width: 400px;
+        padding: 15px;
+    }
+}
+
+/* Адаптивность для экранов до 480px (телефоны) */
+@media (max-width: 480px) {
+    .divCarForm {
+        max-width: 100%;
+        padding: 10px;
+    }
 }

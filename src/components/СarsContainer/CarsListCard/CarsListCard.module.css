@@ -1,12 +1,13 @@
+/* Основной стиль (для экранов 1024px и выше) */
 .carsListCard {
-    border: gold 2px solid;
+    border: 2px solid gold;
     margin-top: 20px;
     height: 65vh;
     width: 25vw;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     align-items: center;
+    flex-wrap: wrap;
     text-align: center;
     background: #9a9a9a;
     overflow: hidden;
@@ -17,12 +18,14 @@
     height: 48vh;
     width: 40vw;
 }
+
 .carsListCard button {
     text-decoration: none;
     background: none;
     border: none;
     cursor: pointer;
 }
+
 .textDiv {
     display: flex;
     justify-content: center;
@@ -31,5 +34,107 @@
     background: black;
     color: gold;
     width: 100vw;
-    height: 16.8vh ;
+    height: 16.8vh;
+}
+
+/* Адаптивность для экранов 1440px и выше */
+@media (min-width: 1440px) {
+    .carsListCard {
+        height: 60vh;
+        width: 22vw;
+    }
+
+    .carsPosterImg {
+        height: 45vh;
+        width: 35vw;
+    }
+
+    .textDiv {
+        font-size: 28px;
+    }
+}
+
+/* Адаптивность для экранов 1920px и выше */
+@media (min-width: 1920px) {
+    .carsListCard {
+        height: 70vh;
+        width: 30vw;
+    }
+
+    .carsPosterImg {
+        height: 55vh;
+        width: 45vw;
+    }
+
+    .textDiv {
+        font-size: 32px;
+    }
+}
+
+/* Адаптивность для экранов от 768px до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .carsListCard {
+        height: 60vh;
+        width: 45vw;
+    }
+
+    .carsPosterImg {
+        height: 40vh;
+        width: 60vw;
+    }
+
+    .textDiv {
+        font-size: 24px;
+    }
+}
+
+/* Адаптивность для экранов от 480px до 768px (небольшие планшеты и телефоны) */
+@media (max-width: 768px) {
+    .carsListCard {
+        height: 50vh;
+        width: 60vw;
+    }
+
+    .carsPosterImg {
+        height: 35vh;
+        width: 70vw;
+    }
+
+    .textDiv {
+        font-size: 20px;
+    }
+}
+
+/* Адаптивность для экранов до 480px (телефоны) */
+@media (max-width: 480px) {
+    .carsListCard {
+        height: 45vh;
+        width: 80vw;
+    }
+
+    .carsPosterImg {
+        height: 30vh;
+        width: 90vw;
+    }
+
+    .textDiv {
+        font-size: 18px;
+    }
+}
+
+/* Адаптивность для экранов до 320px (очень маленькие экраны) */
+@media (max-width: 320px) {
+    .carsListCard {
+        height: 40vh;
+        width: 90vw;
+    }
+
+    .carsPosterImg {
+        height: 25vh;
+        width: 100vw;
+    }
+
+    .textDiv {
+        font-size: 16px;
+    }
 }

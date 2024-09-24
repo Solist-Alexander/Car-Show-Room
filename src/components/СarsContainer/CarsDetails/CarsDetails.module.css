@@ -1,11 +1,93 @@
-.flexDiv{
+/* Основной стиль для всех экранов */
+.flexDiv {
     height: 100%;
     background: gray;
     display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
 }
-.details{
+
+/* Контентная часть (детали) */
+.details {
     padding: 50px 0 0 30px;
+    flex-grow: 1; /* Для адаптивного заполнения пространства */
 }
-.details p{
+
+/* Стиль текста в блоке деталей */
+.details p {
     font-size: 20px;
+    color: #fff; /* Контрастный цвет для лучшей читаемости на сером фоне */
+    line-height: 1.5; /* Улучшенное межстрочное расстояние для читабельности */
+}
+
+/* Адаптивность для больших экранов от 1440px */
+@media (min-width: 1440px) {
+    .flexDiv {
+        flex-direction: row; /* Для больших экранов — горизонтальная ориентация */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .details {
+        padding: 50px 30px;
+    }
+}
+
+/* Адаптивность для экранов от 1024px до 1440px (ноутбуки, планшеты в горизонтальном режиме) */
+@media (max-width: 1440px) {
+    .flexDiv {
+        flex-direction: row;
+    }
+
+    .details {
+        padding: 30px 20px;
+    }
+}
+
+/* Адаптивность для планшетов и небольших экранов от 768px до 1024px */
+@media (max-width: 1024px) {
+    .flexDiv {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .details {
+        padding: 30px 20px;
+    }
+
+    .details p {
+        font-size: 18px; /* Немного уменьшенный текст для компактных устройств */
+    }
+}
+
+/* Адаптивность для экранов от 480px до 768px (планшеты и телефоны) */
+@media (max-width: 768px) {
+    .flexDiv {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .details {
+        padding: 20px 10px;
+    }
+
+    .details p {
+        font-size: 16px;
+    }
+}
+
+/* Адаптивность для мобильных устройств (до 480px) */
+@media (max-width: 480px) {
+    .flexDiv {
+        padding: 10px;
+    }
+
+    .details {
+        padding: 10px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
 }

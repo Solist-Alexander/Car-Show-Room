@@ -1,6 +1,7 @@
-.mainCarsList{
+/* Основной стиль для большого экрана (1024px и выше) */
+.mainCarsList {
     background: gray;
-
+    padding: 20px;
 }
 
 .carsListCardDiv {
@@ -8,6 +9,51 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 10px;
-    margin-left: 250px;
     grid-row-gap: 10px;
+    margin-left: 200px;
+
+}
+
+/* Адаптивность для экранов 1440px и выше */
+@media (min-width: 1440px) {
+    .carsListCardDiv {
+        width: 70vw;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Адаптивность для экранов 1920px и выше */
+@media (min-width: 1920px) {
+    .carsListCardDiv {
+        margin-left: 18%;
+        width: 65vw;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Адаптивность для экранов от 768px до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .carsListCardDiv {
+        width: 85vw;
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 50px;
+    }
+}
+
+/* Адаптивность для экранов от 480px до 768px (небольшие планшеты и телефоны) */
+@media (max-width: 768px) {
+    .carsListCardDiv {
+        width: 90vw;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 120px;
+    }
+}
+
+/* Адаптивность для экранов до 480px (телефоны) */
+@media (max-width: 480px) {
+    .carsListCardDiv {
+        width: 95vw;
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 30px;
+    }
 }

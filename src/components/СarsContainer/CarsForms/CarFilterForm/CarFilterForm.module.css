@@ -1,34 +1,37 @@
+/* Основной стиль (для экранов 1024px и выше) */
 .filterForm {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Уменьшенное расстояние между элементами */
-    padding: 15px; /* Уменьшенные отступы */
+    gap: 10px;
+    padding: 20px;
     border: 1px solid #ccc;
-    border-radius: 6px; /* Более мягкие закругленные углы */
-    background-color: #f5f5f5; /* Немного более светлый фон */
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Более легкая тень */
+    border-radius: 6px;
+    background-color: #f5f5f5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .filterForm h2 {
-    margin-bottom: 10px; /* Уменьшенный отступ */
-    font-size: 1.2rem; /* Меньший размер шрифта */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
     color: #333;
 }
 
 .filterForm label {
     display: flex;
     flex-direction: column;
-    font-weight: 500; /* Сделано немного менее жирным */
+    font-weight: 500;
     color: #555;
-    font-size: 0.9rem; /* Уменьшенный размер шрифта */
+    font-size: 1rem;
 }
 
 .filterForm input {
-    padding: 8px; /* Уменьшенные отступы внутри полей */
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 3px; /* Более компактные закругления */
-    font-size: 0.9rem; /* Меньший размер шрифта */
-    transition: border-color 0.2s; /* Более быстрый переход */
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
 }
 
 .filterForm input:focus {
@@ -38,16 +41,163 @@
 
 .filterForm button {
     align-self: flex-start;
-    padding: 8px 12px; /* Более компактные размеры кнопки */
+    padding: 10px 15px;
     background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 3px;
-    font-size: 0.9rem; /* Меньший размер шрифта */
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .filterForm button:hover {
     background-color: #2980b9;
+}
+
+/* Адаптивность для экранов 1440px и выше */
+@media (min-width: 1440px) {
+    .filterForm {
+        max-width: 960px;
+    }
+
+    .filterForm h2 {
+        font-size: 1.7rem;
+    }
+
+    .filterForm label {
+        font-size: 1.1rem;
+    }
+
+    .filterForm input {
+        font-size: 1.1rem;
+    }
+
+    .filterForm button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Адаптивность для экранов 1920px и выше */
+@media (min-width: 1920px) {
+    .filterForm {
+        max-width: 1200px;
+    }
+
+    .filterForm h2 {
+        font-size: 2rem;
+    }
+
+    .filterForm label {
+        font-size: 1.2rem;
+    }
+
+    .filterForm input {
+        font-size: 1.2rem;
+    }
+
+    .filterForm button {
+        font-size: 1.2rem;
+    }
+}
+
+/* Адаптивность для экранов 768px до 1024px (планшеты) */
+@media (max-width: 1024px) {
+    .filterForm {
+        max-width: 600px;
+    }
+
+    .filterForm h2 {
+        font-size: 1.3rem;
+    }
+
+    .filterForm label {
+        font-size: 0.9rem;
+    }
+
+    .filterForm input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .filterForm button {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Адаптивность для экранов 480px до 768px (небольшие планшеты и телефоны) */
+@media (max-width: 768px) {
+    .filterForm {
+        max-width: 90%;
+    }
+
+    .filterForm h2 {
+        font-size: 1.2rem;
+    }
+
+    .filterForm label {
+        font-size: 0.85rem;
+    }
+
+    .filterForm input {
+        padding: 7px;
+        font-size: 0.85rem;
+    }
+
+    .filterForm button {
+        padding: 7px 10px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Адаптивность для экранов до 480px (телефоны) */
+@media (max-width: 480px) {
+    .filterForm {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .filterForm h2 {
+        font-size: 1.1rem;
+    }
+
+    .filterForm label {
+        font-size: 0.8rem;
+    }
+
+    .filterForm input {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    .filterForm button {
+        padding: 6px 8px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Адаптивность для экранов до 320px (очень маленькие экраны) */
+@media (max-width: 320px) {
+    .filterForm {
+        padding: 8px;
+    }
+
+    .filterForm h2 {
+        font-size: 1rem;
+    }
+
+    .filterForm label {
+        font-size: 0.75rem;
+    }
+
+    .filterForm input {
+        padding: 5px;
+        font-size: 0.75rem;
+    }
+
+    .filterForm button {
+        padding: 5px 7px;
+        font-size: 0.75rem;
+    }
 }

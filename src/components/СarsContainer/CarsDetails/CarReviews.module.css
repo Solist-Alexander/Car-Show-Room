@@ -1,8 +1,75 @@
-.mainDiv{
-    border: gold 2px solid;
+/* Основной стиль для всех экранов */
+.mainDiv {
+    border: 2px solid gold;
     background: #9a9a9a;
     color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Закругленные углы */
+    margin: 20px auto;
+    max-width: 1200px; /* Ограничение максимальной ширины для больших экранов */
 }
-.mainDiv p{
+
+/* Стиль текста в блоке */
+.mainDiv p {
     font-size: 20px;
+    line-height: 1.5;
+}
+
+/* Адаптивность для экранов от 1440px и выше */
+@media (min-width: 1440px) {
+    .mainDiv {
+        padding: 30px;
+        max-width: 1400px;
+    }
+
+    .mainDiv p {
+        font-size: 22px; /* Увеличен размер шрифта для больших экранов */
+    }
+}
+
+/* Адаптивность для экранов от 1024px до 1440px */
+@media (max-width: 1440px) {
+    .mainDiv {
+        padding: 25px;
+    }
+
+    .mainDiv p {
+        font-size: 20px;
+    }
+}
+
+/* Адаптивность для экранов от 768px до 1024px */
+@media (max-width: 1024px) {
+    .mainDiv {
+        padding: 20px;
+    }
+
+    .mainDiv p {
+        font-size: 18px;
+    }
+}
+
+/* Адаптивность для экранов от 480px до 768px */
+@media (max-width: 768px) {
+    .mainDiv {
+        padding: 15px;
+        max-width: 90vw; /* Используем процентное значение для гибкости */
+    }
+
+    .mainDiv p {
+        font-size: 16px;
+    }
+}
+
+/* Адаптивность для мобильных устройств (до 480px) */
+@media (max-width: 480px) {
+    .mainDiv {
+        padding: 10px;
+        max-width: 95vw;
+    }
+
+    .mainDiv p {
+        font-size: 14px; /* Уменьшен размер шрифта для маленьких экранов */
+    }
 }

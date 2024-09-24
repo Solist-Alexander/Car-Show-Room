@@ -22,25 +22,10 @@ const CarFilterForm: FC<IProps> = ({ onFilter }) => {
 
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={style.filterForm}>
-            <label>
-                Price Min:
-                <input type="number" {...register('priceMin')} placeholder="Min Price" />
-            </label>
-
-            <label>
-                Price Max:
-                <input type="number" {...register('priceMax')} placeholder="Max Price" />
-            </label>
-
-            <label>
-                Brand:
-                <input type="text" {...register('brand')} placeholder="Brand" />
-            </label>
-
-            <label>
-                Rating Min:
-                <input type="number" {...register('ratingMin')} placeholder="Min Rating" min="1" max="5" />
-            </label>
+            <label>Price Min:<input type="number" {...register('priceMin')} placeholder="Min Price" /></label>
+            <label>Price Max:<input type="number" {...register('priceMax')} placeholder="Max Price" /></label>
+            <label>Brand:<input type="text" {...register('brand')} placeholder="Brand" /></label>
+            <label>Rating Min:<input type="number" {...register('ratingMin')} placeholder="Min Rating" min="1" max="5" /></label>
 
             <button type="submit">Filter</button>
         </form>
