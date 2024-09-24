@@ -1,0 +1,65 @@
+.divCarForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.divCarForm label {
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.divCarForm input,
+.divCarForm textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.divCarForm input:focus,
+.divCarForm textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.divCarForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.divCarForm button:hover {
+    background-color: #45a049;
+}
+
+.divCarForm button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.divCarForm span {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.divCarForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}

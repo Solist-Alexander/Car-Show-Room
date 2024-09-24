@@ -3,8 +3,7 @@ import { ICar, IReview } from "../../../interfaces/carInterface";
 import CarouselForCar from "../../Bootstrap/carousel";
 import style from './CarsDetails.module.css';
 import CarReviews from "./CarReviews";
-import ReviewForm from "./ReviewForm";
-import {boolean} from "joi";
+import ReviewForm from "../CarsForms/ReviewForm/ReviewForm";
 
 interface IProps extends PropsWithChildren {
     carDetails: ICar;
@@ -29,6 +28,12 @@ const CarsDetails: FC<IProps> = ({ carDetails }) => {
         const updatedReviews = [...ArrReviews, newReview];
         setReviews(updatedReviews);
         localStorage.setItem(`${title}`, JSON.stringify(updatedReviews));
+
+        setStatusButtonReview(false);
+    };
+
+    const toggleButtonText = () => {
+        setStatusButtonReview(!StatusButtonReview);
     };
 
     return (
@@ -48,13 +53,18 @@ const CarsDetails: FC<IProps> = ({ carDetails }) => {
                 </div>
             </div>
             <div>
-                <button>Write review</button>
+                <button onClick={toggleButtonText}>
+                    {StatusButtonReview ? 'Close review form' : 'Leave a review'}
+                </button>
+            </div>
+
+            <div>
+                {StatusButtonReview && <ReviewForm onAddReview={handleAddReview} />}
             </div>
             <div>
-                {ArrReviews.map((review) => <CarReviews review={review} key={review.date} />)}
-            </div>
-            <div>
-                <ReviewForm onAddReview={handleAddReview} />
+                {ArrReviews.map((review) => (
+                    <CarReviews review={review} key={review.date} />
+                ))}
             </div>
         </div>
     );
